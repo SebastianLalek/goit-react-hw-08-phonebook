@@ -14,6 +14,7 @@ import {
 
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
+import { authReducer } from './auth/authSlice';
 
 const authPersitConfig = {
   key: 'auth',
@@ -36,4 +37,4 @@ export const store = configureStore({
   devTools: process.env.NODE_ENV === 'development',
 });
 
-const persistor = persistStore(store);
+export const persistor = persistStore(store);

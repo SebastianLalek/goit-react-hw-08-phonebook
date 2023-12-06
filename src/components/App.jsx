@@ -1,34 +1,18 @@
-import ContactList from './contacts/Contacts';
-import Form from './form/form';
-import Section from './section/section';
-import Filter from './filter/filter';
+import { Route, Routes } from 'react-router-dom';
 
-function Phonebook() {
-  return (
-    <div>
-      <Section title="Phonebook">
-        <Form />
-      </Section>
-      <Section title="Contacts">
-        <ContactList>
-          <Filter />
-        </ContactList>
-      </Section>
-    </div>
-  );
-}
+import Register from 'pages/register/Register';
+import LogIn from 'pages/login/LogIn';
+import Contacts from 'pages/contacts/Contacts';
+import { Layout } from 'pages/layout/Layout';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        fontSize: 25,
-        color: '#010101',
-      }}
-    >
-      <Phonebook />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Route>
+    </Routes>
   );
 };

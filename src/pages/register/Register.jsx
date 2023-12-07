@@ -1,10 +1,26 @@
+import { useDispatch } from 'react-redux';
 import css from './Register.module.css';
+import { register } from 'redux/auth/authOperations';
 
 export default function Register() {
+  const dispatch = useDispatch();
+
+  const addNewUser = e => {
+    e.preventDefault();
+    console.log(e.target.password.value);
+
+    const newUser = {
+      name: e.target.email.value,
+      email: e.target.email.value,
+      password: e.target.password.value,
+    };
+
+    dispatch(register(newUser));
+  };
   return (
     <section className={css.section}>
       <h2>Register</h2>
-      <form className={css.form} onSubmit={addNewContact}>
+      <form className={css.form} onSubmit={addNewUser}>
         <label className={css.label}>
           <p>Email</p>
           <input

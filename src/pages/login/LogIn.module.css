@@ -1,0 +1,31 @@
+.section {
+  max-width: 50vw;
+  margin: 0 auto;
+  font-size: 25px;
+  color: rgb(12, 12, 12);
+}
+
+.form {
+  border: 1px solid rgb(12, 12, 12);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.label p {
+  margin: 5px 0;
+}
+
+.label input {
+  border-radius: 3px;
+}
+
+.button {
+  display: block;
+  line-height: 1.5;
+  padding: 0 10px;
+  margin: 15px 0;
+  background-color: rgb(104, 104, 255);
+  color: rgb(245, 245, 245);
+  border: none;
+  border-radius: 3px;
+}

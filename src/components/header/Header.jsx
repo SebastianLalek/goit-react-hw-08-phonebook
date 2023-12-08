@@ -10,8 +10,10 @@ export default function Header() {
   const { isLoggedIn } = useAuth();
   return (
     <header className={css.header}>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      <div className={css.container}>
+        <Navigation />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </div>
     </header>
   );
 }

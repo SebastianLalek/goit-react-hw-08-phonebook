@@ -1,8 +1,9 @@
 .layout {
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(245, 245, 245);
   background-image: url(/src/images/social-media-3846597_1920.png);
   background-attachment: fixed;
+  background-position: center;
 }
 
 .container {

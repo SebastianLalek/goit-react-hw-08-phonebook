@@ -1,4 +1,11 @@
 .layout {
+  height: 100vh;
+  background-color: rgba(245, 245, 245);
+  background-image: url(/src/images/social-media-3846597_1920.png);
+  background-attachment: fixed;
+}
+
+.container {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 16px;

@@ -9,17 +9,24 @@ import { useDispatch } from 'react-redux';
 import { refreshUser } from 'redux/auth/authOperations';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+import { useAuth } from 'hooks/useAuth';
+import Loader from './loader/Loader';
+import Home from 'pages/home/Home';
 
 export const App = () => {
   const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <Loader />
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
         <Route
           path="/login"
           element={

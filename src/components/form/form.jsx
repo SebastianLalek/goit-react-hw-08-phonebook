@@ -45,7 +45,7 @@ export default function Form() {
   return (
     <form className={css.form} onSubmit={addNewContact}>
       <label className={css.label}>
-        <p>Name</p>
+        Name
         <input
           type="text"
           name="name"
@@ -54,7 +54,7 @@ export default function Form() {
         />
       </label>
       <label className={css.label}>
-        <p>Number</p>
+        Number
         <input
           type="tel"
           name="number"

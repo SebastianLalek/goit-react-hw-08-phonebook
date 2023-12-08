@@ -1,0 +1,19 @@
+.section {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.hero {
+  background-color: rgba(245, 245, 245);
+  padding: 20px 35px;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.subtitle {
+  font-weight: 600;
+}

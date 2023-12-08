@@ -7,7 +7,6 @@ export default function Register() {
 
   const addNewUser = e => {
     e.preventDefault();
-    console.log(e.target.password.value);
 
     const newUser = {
       name: e.target.email.value,

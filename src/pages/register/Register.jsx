@@ -21,7 +21,7 @@ export default function Register() {
       <h2>Register</h2>
       <form className={css.form} onSubmit={addNewUser}>
         <label className={css.label}>
-          <p>Email</p>
+          Email
           <input
             type="email"
             name="email"
@@ -30,7 +30,7 @@ export default function Register() {
           />
         </label>
         <label className={css.label}>
-          <p>Password</p>
+          Password
           <input
             type="password"
             name="password"

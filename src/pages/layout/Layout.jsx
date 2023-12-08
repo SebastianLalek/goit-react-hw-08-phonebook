@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Header from 'components/header/Header';
 
 import css from './Layout.module.css';
+import Loader from 'components/loader/Loader';
 
 export const Layout = () => {
   return (
@@ -11,7 +12,7 @@ export const Layout = () => {
       <Header />
       <main>
         <div className={css.container}>
-          <Suspense fallback={<div>Loading page...</div>}>
+          <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
         </div>

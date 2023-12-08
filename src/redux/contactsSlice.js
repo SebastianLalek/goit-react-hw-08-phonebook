@@ -30,7 +30,6 @@ const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.contacts.push(action.payload);
-        console.log(action.payload);
         Notiflix.Notify.success(
           `${action.payload.name} has been added to your contact list`
         );

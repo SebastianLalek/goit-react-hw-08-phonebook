@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { addContact, deleteContact, fetchContacts } from './operations';
+import Notiflix from 'notiflix';
 
 const contactsSlice = createSlice({
   name: 'phonebook',
@@ -29,6 +30,10 @@ const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.contacts.push(action.payload);
+        console.log(action.payload);
+        Notiflix.Notify.success(
+          `${action.payload.name} has been added to your contact list`
+        );
       })
       .addCase(addContact.rejected, (state, action) => {
         state.isLoading = false;
@@ -42,6 +47,9 @@ const contactsSlice = createSlice({
         state.error = null;
         state.contacts = state.contacts.filter(
           contact => contact.id !== action.payload.id
+        );
+        Notiflix.Notify.info(
+          `${action.payload.name} has been removed from your contact list`
         );
       })
       .addCase(deleteContact.rejected, (state, action) => {

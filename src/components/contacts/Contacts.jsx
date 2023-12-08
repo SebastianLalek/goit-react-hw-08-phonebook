@@ -27,8 +27,10 @@ export default function ContactList({ children }) {
       {children}
       <ul className={css.list}>
         {filteredContacts().map(contact => (
-          <li key={contact.id}>
-            {contact.name}: {contact.number}
+          <li className={css.listItem} key={contact.id}>
+            <p>
+              {contact.name}: {contact.number}
+            </p>
             <button
               className={css.button}
               id={contact.id}

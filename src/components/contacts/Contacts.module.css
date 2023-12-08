@@ -3,20 +3,34 @@
   padding: 0;
 }
 
-.list li {
-  background-color: rgb(200, 200, 238);
-  line-height: 1.5;
+.listItem {
+  display: flex;
+  justify-content: space-between;
   margin: 10px 0;
-  padding: 5px;
+  padding: 8px;
+  background-color: rgb(200, 200, 238);
   border-radius: 5px;
 }
 
+.listItem p {
+  margin: 0;
+}
+
 .button {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 5px 15px;
+  margin: 0 15px;
   background-color: rgb(104, 104, 255);
   color: rgb(245, 245, 245);
   border: none;
   border-radius: 3px;
-  line-height: 1.5;
-  padding: 0 10px;
-  margin: 5px 10px;
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 400ms;
+}
+
+.button:hover {
+  background-color: rgb(75, 75, 241);
 }

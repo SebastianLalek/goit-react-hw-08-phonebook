@@ -21,7 +21,7 @@ export default function LogIn() {
       <h2>Log in</h2>
       <form className={css.form} onSubmit={loginUser}>
         <label className={css.label}>
-          <p>Email</p>
+          Email
           <input
             type="email"
             name="email"
@@ -30,7 +30,7 @@ export default function LogIn() {
           />
         </label>
         <label className={css.label}>
-          <p>Password</p>
+          Password
           <input
             type="password"
             name="password"

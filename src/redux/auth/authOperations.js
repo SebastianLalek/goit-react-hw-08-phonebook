@@ -34,3 +34,23 @@ export const login = createAsyncThunk(
     }
   }
 );
+
+export const refreshUser = createAsyncThunk(
+  'auth/refresh',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const token = state.auth.token;
+
+    if (!token) {
+      return thunkAPI.rejectWithValue('Missing token');
+    }
+
+    try {
+      setAuthHeader(token);
+      const response = await axios.get('/users/current');
+      return response.data;
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err.message);
+    }
+  }
+);

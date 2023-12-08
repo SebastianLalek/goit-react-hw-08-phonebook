@@ -1,8 +1,6 @@
 .section {
-  max-width: 50vw;
+  max-width: 50%;
   margin: 0 auto;
-  font-size: 25px;
-  color: rgb(12, 12, 12);
 }
 
 .form {

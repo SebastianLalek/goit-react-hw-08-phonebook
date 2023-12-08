@@ -7,11 +7,11 @@ export default function Navigation() {
   const { isLoggedIn } = useAuth();
   return (
     <nav>
-      <NavLink className={css.link} to="/">
+      <NavLink className={css.link} to="/goit-react-hw-08-phonebook">
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink className={css.link} to="/contacts">
+        <NavLink className={css.link} to="contacts">
           Contacts
         </NavLink>
       )}
